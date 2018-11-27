@@ -66,5 +66,13 @@ const randomValueFromArray = (arr) => {
 
 // Merge Multiple Array's
 const mergeArrays = (...arg) => {
-  arg.map()
+  let arrs = [];
+  arg.map((data) => {
+    if(!isArray(data)) {
+      throw console.error(`All properties is not array type`)
+    }
+    arrs.push(data);
+  })
+
+  return arrs
 }
